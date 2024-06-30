@@ -2,7 +2,12 @@
 
 #Install dependencies
 sudo apt-get update
-sudo apt-get install python3 pip curl cargo -y;
+sudo apt-get install python3 pip curl -y;
+
+# Install (latest) rust toolchain
+curl https://sh.rustup.rs -sSf >> rustup.sh && chmod +x rustup.sh && ./rustup.sh -y
+
+. $HOME/.cargo/env
 
 # Check out OpenBench code
 git clone https://github.com/sroelants/OpenBench
